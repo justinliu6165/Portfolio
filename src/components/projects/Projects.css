@@ -1,0 +1,143 @@
+#project-wrapper {
+    width: 100%;
+    height: auto; 
+}
+
+.project-title {
+    color: #fdeb37;
+    text-align: left;
+    padding-left: 1.3rem;
+}
+
+.project-box figure.project {
+    width: 100%;
+    max-height: 200px;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+}
+
+figure.project .img-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+figure.project:hover .img-overlay {
+    opacity: 1;
+}
+
+figure.project figcaption {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+figure.project figcaption::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+figure.project figcaption::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
+}
+
+figure.project:hover figcaption {
+    opacity: 1;
+}
+
+figure.project:hover figcaption::before {
+    top: -15%;
+    opacity: 1;
+}
+
+figure.project:hover figcaption::after {
+    bottom: -25%;
+    opacity: 1;
+}
+
+.project .source-code {
+    position: absolute;
+    color: white;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid #fdeb37;
+    padding: 0.5rem;
+    opacity: 0;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.project:hover .source-code {
+    opacity: 1;
+}
+
+.source-code:hover {
+    background-color: #fdeb37;
+    color: black;
+}
+
+/*responsive web design tablet*/
+
+@media only screen and (min-width: 700px) {
+    .project-title {
+        margin: 3rem 0;
+    }
+    .project-box figure.project {
+        max-height: 400px;
+    }
+}
+
+/*responsive web design desktop*/
+
+@media only screen and (min-width: 1000px) {
+    #project-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .project-title {
+        margin: 3rem 0;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .project-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-box figure.project {
+        margin: 0;
+    }
+}

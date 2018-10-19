@@ -1,0 +1,116 @@
+header {
+    height: auto;
+    width: 100%;
+    position: relative;
+    color: #fdeb37;
+    z-index: 0;
+}
+
+.title-wrapper {
+    width: 100%;
+    padding: 4rem 0 0 0;
+}
+
+.header-title {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+}
+
+.job-title {
+    letter-spacing: 0.4em;
+    font-size: 1.3rem;
+}
+
+.tech-wrapper {
+    list-style-type: none;
+    padding: 0;
+    display: block;
+    border-left: 2px solid #fdeb37;
+}
+
+.tech-wrapper .tech {
+    text-align: left;
+    font-size: 1rem;
+    padding: 0.3rem 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.tech-wrapper .tech:hover {
+    padding-left: 1.5rem;
+}
+
+/*responsive web design tablet*/
+
+@media only screen and (min-width: 700px) {
+    header {
+        height: 40vh;
+        width: 100%;
+    }
+        
+    .title-wrapper {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .tech-stack {
+        position: absolute;
+        top: 70%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .tech-wrapper {
+        display: flex;
+        border: none;
+    }
+    
+    .tech-wrapper .tech {
+        text-align: center;
+        border-right: 2px solid #fdeb37;
+    }
+
+    .tech-wrapper .tech:last-child {
+        border-right: none;
+    }
+    
+    .tech-wrapper .tech:hover {
+        padding-left: 1rem;
+    }
+}
+
+/*responsive web design desktop*/
+
+@media only screen and (min-width: 1000px) {
+    header {
+        height: 66vh;
+    }
+    
+    .header-title {
+        font-size: 4rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .job-title {
+        font-size: 1.6rem;
+    }
+
+    .tech-stack {
+        top: 70%; 
+    }
+
+    .tech-wrapper .tech {
+        font-size: 1.3rem;
+    }
+}
+
+/*responsive web design large desktop*/
+
+@media only screen and (min-width: 1500px) {
+    header {
+        height: 700px;
+    }
+}
+
+
