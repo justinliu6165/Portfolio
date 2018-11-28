@@ -5,7 +5,9 @@ nav {
     right: 0;
     color: white;
     z-index: 1;
-    height: 0;
+    height: 10vh;
+    background-color:#15171d;
+    opacity: 0.8;
 }
 
 .desktop-navbar {

@@ -37,7 +37,10 @@
     }
     .profile-wrapper {
         overflow: hidden;
-        border-radius: 5%;
+        border-top-right-radius: 0; 
+        border-bottom-left-radius: 0; 
+        border-top-left-radius: 50px;
+        border-bottom-right-radius: 50px;
     }
 }
 

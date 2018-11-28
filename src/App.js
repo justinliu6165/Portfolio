@@ -16,9 +16,8 @@ class App extends Component {
           <Header />
           <AboutMe />
           <Projects />
+          <Contact />
         </div>
-        <Contact />
-        <div id="contact-target"></div>
       </div>
     );
   }

@@ -2,10 +2,6 @@
     width: 100%;
     height: 50vh;
     color: white;
-    position: fixed;
-    z-index: -10;
-    bottom: 0;
-    left: 0;
 }
 
 .contact-message {
@@ -45,6 +41,7 @@
 @media only screen and (min-width: 700px) {
     #contact-wrapper {
         height: 30vh;
+        margin-top: 5rem;
     }
 
     .social-media {
@@ -78,6 +75,8 @@
 
     .contact-border {
         border: 2px solid #fdeb37;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
         width: 50%;
         margin: 1rem auto;
     }
